@@ -1,4 +1,28 @@
-<table>
+<div *ngFor="let comida of comidas" [class.selected]="comida === selectedComida" (click)="onSelect(comida)">
+    <div class="col-50">
+        <div style="text-align: center;">
+            <img src="{{comida.url}}" width="200px" height="200px">
+        </div><br>
+
+        <div style="background: white; 
+        border-radius: 10px;
+        padding: 10px;
+        ">
+            <label>Id:
+        <span class="badge">{{comida.id}}</span>
+      </label><br>
+            <label>Nombre:
+        {{comida.name}}
+      </label><br>
+            <label>
+        Costo indivudual:{{comida.cost}}
+      </label>
+        </div><br>
+    </div>
+</div>
+<app-comidas-detalle [comida]="selectedComida"></app-comidas-detalle>
+
+<!-- <table>
     <th>
         Id
     </th>
@@ -27,4 +51,4 @@
     </tr>
 </table>
 
-<app-comidas-detalle [comida]="selectedComida"></app-comidas-detalle>
+ -->
