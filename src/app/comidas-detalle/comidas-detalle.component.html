@@ -1,28 +1,33 @@
-<div class="container" *ngIf="comida">
+<!-- <a href="#openModal">Lanzar el modal</a> -->
 
-    <div class="row">
-        <div class="col-25">
-            <label>Nombre</label>
-        </div>
-        <div class="col-75">
-            <input [(ngModel)]="comida.name" placeholder="name">
-        </div>
-    </div>
+<div id="openModal" class="modalDialog ">
 
-    <div class="row">
-        <div class="col-25">
-            <label>Costo:</label>
+    <div class="container" *ngIf="comida">
+        <a href="#close" title="Close" class="close">X</a>
+        <div class="row">
+            <div class="col-25">
+                <label>Nombre</label>
+            </div>
+            <div class="col-75">
+                <input [(ngModel)]="comida.name" placeholder="name">
+            </div>
         </div>
-        <div class="col-75">
-            <input [(ngModel)]="comida.cost" placeholder="Costo del producto">
+
+        <div class="row">
+            <div class="col-25">
+                <label>Costo:</label>
+            </div>
+            <div class="col-75">
+                <input [(ngModel)]="comida.cost" placeholder="Costo del producto">
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-25">
-            <label>Url:</label>
-        </div>
-        <div class="col-75">
-            <textarea style="height:100px" [(ngModel)]="comida.url" placeholder="url de la imagen"></textarea>
+        <div class="row">
+            <div class="col-25">
+                <label>Url:</label>
+            </div>
+            <div class="col-75">
+                <textarea style="height:100px" [(ngModel)]="comida.url" placeholder="url de la imagen"></textarea>
+            </div>
         </div>
     </div>
 </div>

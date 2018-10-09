@@ -18,3 +18,11 @@
         margin: 0.5%;
     }
 }
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
