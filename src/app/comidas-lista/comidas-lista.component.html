@@ -1,0 +1,30 @@
+<table>
+    <th>
+        Id
+    </th>
+    <th>
+        Nombre
+    </th>
+    <th>
+        Imagen
+    </th>
+    <th>
+        Costo individual
+    </th>
+    <tr *ngFor="let comida of comidas" [class.selected]="comida === selectedComida" (click)="onSelect(comida)">
+        <td>
+            <span class="badge">{{comida.id}}</span>
+        </td>
+        <td>
+            {{comida.name}}
+        </td>
+        <td>
+            <img src="{{comida.url}}" width="120px" height="120px">
+        </td>
+        <td>
+            {{comida.cost}}
+        </td>
+    </tr>
+</table>
+
+<app-comidas-detalle [comida]="selectedComida"></app-comidas-detalle>
