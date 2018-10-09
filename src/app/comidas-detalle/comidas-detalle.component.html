@@ -1,9 +1,28 @@
-<div *ngIf="comida">
-    <h2>Detalle para: {{comida.name | uppercase}}</h2>
-    <div><span>id: </span>{{comida.id}}</div>
-    <div>
-        <label>Nombre:
-      <input [(ngModel)]="comida.name" placeholder="name" />
-    </label>
+<div class="container" *ngIf="comida">
+
+    <div class="row">
+        <div class="col-25">
+            <label>Nombre</label>
+        </div>
+        <div class="col-75">
+            <input [(ngModel)]="comida.name" placeholder="name">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-25">
+            <label>Costo:</label>
+        </div>
+        <div class="col-75">
+            <input [(ngModel)]="comida.cost" placeholder="Costo del producto">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label>Url:</label>
+        </div>
+        <div class="col-75">
+            <textarea style="height:100px" [(ngModel)]="comida.url" placeholder="url de la imagen"></textarea>
+        </div>
     </div>
 </div>
